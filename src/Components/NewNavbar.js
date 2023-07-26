@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import "./NewNavbar.css";
 import {FaFacebookSquare ,FaInstagramSquare ,FaYoutubeSquare} from "react-icons/fa"
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -21,16 +22,16 @@ const Navbar = () => {
           showIcon ?"menu-link mobile-menu-link" :"menu-link"}>
           <ul>
             <li>
-               <a href="#">Home</a>
+               <NavLink to="/">Home</NavLink>
              </li>
              <li>
-               <a href="#">About</a>
+               <NavLink to="/">About</NavLink>
              </li>
              <li>
-               <a href="#">Service</a>
+               <NavLink to="/">Service</NavLink>
              </li>
              <li>
-               <a href="#">Contact</a>
+               <NavLink to="/">Contact</NavLink>
             </li>
           </ul>
         </div>
@@ -50,7 +51,7 @@ const Navbar = () => {
 
           {/* Hamburger menu start */}
          <div className="hamburger-menu">
-           <a href="#" onClick={()=> setShowIcon(!showIcon)}><GiHamburgerMenu /></a>
+           <NavLink to="/" onClick={()=> setShowIcon(!showIcon)}><GiHamburgerMenu /></NavLink>
 
           </div>
         </div>
